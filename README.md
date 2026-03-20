@@ -1,69 +1,48 @@
 # blefyi
 
-[![crates.io](https://img.shields.io/crates/v/blefyi)](https://crates.io/crates/blefyi)
-[![docs.rs](https://docs.rs/blefyi/badge.svg)](https://docs.rs/blefyi)
+[![crates.io](https://img.shields.io/crates/v/blefyi.svg)](https://crates.io/crates/blefyi)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Async Rust client for the [BLEFYI](https://blefyi.com) API. Look up Bluetooth Low Energy chips, GATT profiles, beacon types, BLE versions, and manufacturer specifications.
+Rust client for the [BLEFYI](https://blefyi.com) REST API. BLE, GATT, beacons. Uses `reqwest` for HTTP.
+
+> **Explore at [blefyi.com](https://blefyi.com)** — interactive tools and comprehensive reference.
 
 ## Install
 
 ```toml
 [dependencies]
 blefyi = "0.1"
-tokio = { version = "1", features = ["full"] }
 ```
 
 ## Quick Start
 
 ```rust
-use blefyi::Client;
-
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let client = Client::new();
-    let results = client.search("nrf52").await?;
-    println!("Found {} results", results.total);
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let client = blefyi::Client::new();
+    let result = client.search("query")?;
+    println!("{:?}", result);
     Ok(())
 }
 ```
 
-## API Methods
-
-| Method | Description |
-|--------|-------------|
-| `search(query)` | Search chips, profiles, and glossary |
-| `chip(slug)` | Get BLE chip details |
-| `profile(slug)` | Get GATT profile details |
-| `version(slug)` | Get Bluetooth version details |
-| `beacon(slug)` | Get beacon type details |
-| `usecase(slug)` | Get use case details |
-| `manufacturer(slug)` | Get manufacturer details |
-| `glossary_term(slug)` | Get glossary term definition |
-| `compare(slug_a, slug_b)` | Compare two BLE chips |
-| `random()` | Get a random BLE chip |
-
-All methods are async and return `Result<T, BleFyiError>`.
-
 ## Also Available
 
-| Language | Package | Install |
-|----------|---------|---------|
-| Python | [blefyi](https://pypi.org/project/blefyi/) | `pip install blefyi` |
-| TypeScript | [blefyi](https://www.npmjs.com/package/blefyi) | `npm install blefyi` |
-| Go | [blefyi-go](https://pkg.go.dev/github.com/fyipedia/blefyi-go) | `go get github.com/fyipedia/blefyi-go` |
-| Rust | [blefyi](https://crates.io/crates/blefyi) | `cargo add blefyi` |
-| Ruby | [blefyi](https://rubygems.org/gems/blefyi) | `gem install blefyi` |
+| Platform | Install | Link |
+|----------|---------|------|
+| **Python** | `pip install blefyi` | [PyPI](https://pypi.org/project/blefyi/) |
+| **npm** | `npm install blefyi` | [npm](https://www.npmjs.com/package/blefyi) |
+| **Go** | `go get github.com/fyipedia/blefyi-go` | [pkg.go.dev](https://pkg.go.dev/github.com/fyipedia/blefyi-go) |
+| **Rust** | `cargo add blefyi` | [crates.io](https://crates.io/crates/blefyi) |
+| **Ruby** | `gem install blefyi` | [rubygems](https://rubygems.org/gems/blefyi) |
 
-## Code FYI Family
 
-| Site | Domain | Focus |
-|------|--------|-------|
-| BarcodeFYI | [barcodefyi.com](https://barcodefyi.com) | Barcode symbologies & standards |
-| QRCodeFYI | [qrcodefyi.com](https://qrcodefyi.com) | QR code types & encoding |
-| NFCFYI | [nfcfyi.com](https://nfcfyi.com) | NFC chips & protocols |
-| BLEFYI | [blefyi.com](https://blefyi.com) | Bluetooth Low Energy |
-| RFIDFYI | [rfidfyi.com](https://rfidfyi.com) | RFID tags & readers |
-| SmartCardFYI | [smartcardfyi.com](https://smartcardfyi.com) | Smart card platforms |
+## Links
+
+- **Site**: [blefyi.com](https://blefyi.com)
+- **API**: [blefyi.com/api/v1/](https://blefyi.com/api/v1/)
+- **OpenAPI**: [blefyi.com/api/v1/schema/](https://blefyi.com/api/v1/schema/)
+
+Part of the [FYIPedia](https://fyipedia.com) open-source developer tools ecosystem.
 
 ## License
 
