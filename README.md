@@ -30,7 +30,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 | Platform | Install | Link |
 |----------|---------|------|
 | **Python** | `pip install blefyi` | [PyPI](https://pypi.org/project/blefyi/) |
-| **npm** | `npm install blefyi` | [npm](https://www.npmjs.com/package/blefyi) |
+| **npm** | `npm install blefyi` | [npm](https://www.npmjs.com/package/@fyipedia/blefyi) |
 | **Go** | `go get github.com/fyipedia/blefyi-go` | [pkg.go.dev](https://pkg.go.dev/github.com/fyipedia/blefyi-go) |
 | **Rust** | `cargo add blefyi` | [crates.io](https://crates.io/crates/blefyi) |
 | **Ruby** | `gem install blefyi` | [rubygems](https://rubygems.org/gems/blefyi) |
