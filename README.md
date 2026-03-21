@@ -42,7 +42,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 - **API**: [blefyi.com/api/v1/](https://blefyi.com/api/v1/)
 - **OpenAPI**: [blefyi.com/api/v1/schema/](https://blefyi.com/api/v1/schema/)
 - **Glossary**: [blefyi.com/glossary/](https://blefyi.com/glossary/)
-- **Guides**: [blefyi.com/guides/](https://blefyi.com/guides/)
+- **Guides**: [blefyi.com/guide/](https://blefyi.com/guide/)
 - **Tools**: [blefyi.com/tools/](https://blefyi.com/tools/)
 Part of the [FYIPedia](https://fyipedia.com) open-source developer tools ecosystem.
 
