@@ -1,6 +1,6 @@
 [package]
 name = "blefyi"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["FYIPedia"]
 description = "Bluetooth Low Energy chip reference, GATT profile lookup, and beacon encyclopedia -- async API client for blefyi.com."
